@@ -6,7 +6,7 @@
     "description": "Adds a red border to all webpages matching mozilla.org.",
   
     "icons": {
-      "48": "icons/border-48.png"
+      "48": "icons/soundtrack-48.png"
     },
   
     "content_scripts": [
@@ -15,6 +15,12 @@
         "js": ["borderify.js"]
       }
     ],
+
+    "browser_action": {
+      "default_icon": "icons/soundtrack-32.png",
+      "default_title": "Site-Soundtrack",
+      "default_popup": "popup/control-audio.html"
+    },
 
     "background": {
       "page": "background-page.html",

@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "site-soundtrack",
+    "version": "1.0",
+  
+    "description": "Adds a red border to all webpages matching mozilla.org.",
+  
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.mozilla.org/*"],
+        "js": ["borderify.js"]
+      }
+    ],
+
+    "background": {
+      "page": "background-page.html",
+      "persistent": false
+    }
+    
+    
+  }
+  

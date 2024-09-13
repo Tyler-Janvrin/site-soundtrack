@@ -2,6 +2,10 @@
     "manifest_version": 2,
     "name": "site-soundtrack",
     "version": "1.0",
+
+    "permissions": [
+      "tabs"
+    ],
   
     "description": "Adds a red border to all webpages matching mozilla.org.",
   

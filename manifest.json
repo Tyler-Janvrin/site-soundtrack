@@ -4,7 +4,8 @@
     "version": "1.0",
 
     "permissions": [
-      "tabs"
+      "tabs",
+      "storage"
     ],
   
     "description": "Adds a red border to all webpages matching mozilla.org.",
@@ -29,6 +30,17 @@
     "background": {
       "page": "background/background-page.html",
       "persistent": true
+    },
+
+    "options_ui": {
+      "page": "options.html"
+    },
+
+
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "janvrin.tyler@gmail.com"
+      }
     }
     
     

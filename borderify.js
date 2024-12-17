@@ -1,1 +1,15 @@
-document.body.style.border = "5px solid red";
+function onError(error) {
+    console.log(`Error: ${error}`);
+  }
+  
+  function onGot(item) {
+    let color = "blue";
+    if (item.color) {
+      color = item.color;
+    }
+    document.body.style.border = `10px solid ${color}`;
+  }
+  
+  const getting = browser.storage.sync.get("color");
+  getting.then(onGot, onError);
+  

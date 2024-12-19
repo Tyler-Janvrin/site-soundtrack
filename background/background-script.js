@@ -1,12 +1,13 @@
 var paused = false;
 
 async function pollPageUrl(){
+    const re = new RegExp(".*tumblr.*");
+
     browser.tabs.query({currentWindow: true, active: true})
     .then((tabs) => {
         console.log("from inside pollPageUrl: " + tabs[0].url);
-        if(tabs[0].url == "https://en.wikipedia.org/wiki/Main_Page"){
+        if(!re.test(tabs[0].url)){
             document.getElementById('jazz-player').pause();
-            playing = false;
         }
         else{
             if(!paused){
@@ -15,10 +16,10 @@ async function pollPageUrl(){
         }
     });
     
-    setTimeout(pollPageUrl, 2000);
+    setTimeout(pollPageUrl, 500);
 }
 
-setTimeout(pollPageUrl, 2000);
+setTimeout(pollPageUrl, 500);
 
 function handleMessage(request, sender, sendResponse) {
     console.log(`The background script received a message: ${request.greeting}`);

@@ -1,2 +1,2 @@
 # site-soundtrack
-Fill this in later
+This is a music player that you can configure to play music when you open certain websites. You can specify which sites you want the music to play on. It's a work in progress...
